@@ -9,6 +9,7 @@ export const styles = (isActive: boolean) =>
       borderRadius: 30,
     },
     text: {
-      fontWeight: "500",
+      fontFamily: "Monserrat-SemiBold",
+      fontSize: 11,
     },
   });

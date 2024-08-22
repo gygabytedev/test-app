@@ -16,7 +16,10 @@
     "react-native-gesture-handler": "~2.16.1",
     "react-native-reanimated": "~3.10.1",
     "rn-vertical-slider": "^4.4.0",
-    "react-native-svg": "15.2.0"
+    "react-native-svg": "15.2.0",
+    "expo-image": "~1.12.14",
+    "expo-font": "~12.0.9",
+    "expo-splash-screen": "~0.27.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

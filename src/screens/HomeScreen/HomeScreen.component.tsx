@@ -4,7 +4,7 @@ import { ListOfTabs } from "../../components";
 import { styles } from "./HomeScreen.style";
 import { Percentage, Volume } from "./components";
 
-const mockTabs = [{ title: "PERCENTAGE" }, { title: "VOLUME" }];
+const mockTabs = [{ title: "PERCENTAGE" }, { title: "VOLIME" }];
 
 const HomeScreen = () => {
   const [activeTab, setActiveTab] = useState<string>(mockTabs[0].title);

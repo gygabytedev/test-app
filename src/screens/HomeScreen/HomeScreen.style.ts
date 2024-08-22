@@ -14,7 +14,7 @@ export const styles = () =>
       marginBottom: 30,
     },
     headerText: {
-      fontWeight: "600",
+      fontFamily: "Monserrat-SemiBold",
       fontSize: 16,
     },
   });

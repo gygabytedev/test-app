@@ -2,6 +2,8 @@ import React, { FC } from "react";
 import { Text, View, StyleSheet } from "react-native";
 import VerticalSlider from "rn-vertical-slider";
 import { styles } from "./Slider.style";
+import { ArrowUp } from "../../../assets/icons/arrowUp";
+import { ArrowDown } from "../../../assets/icons/arrowDown";
 
 interface SliderProps {
   value: number;
@@ -16,6 +18,7 @@ const Slider: FC<SliderProps> = ({ value, setValue }) => {
     indicatorText,
     slider,
     sliderContainer,
+    boxStyle,
   } = styles();
   const Indicator = () => {
     return (
@@ -24,7 +27,11 @@ const Slider: FC<SliderProps> = ({ value, setValue }) => {
           <Text style={indicatorText}>{`${value} %`}</Text>
           <View style={indicatorLine} />
         </View>
-        <View style={indicatorDot} />
+        <View style={boxStyle}></View>
+        <View style={indicatorDot}>
+          <ArrowUp></ArrowUp>
+          <ArrowDown></ArrowDown>
+        </View>
       </View>
     );
   };

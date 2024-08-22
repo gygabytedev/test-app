@@ -1,8 +1,10 @@
 import React, { FC, useEffect, useRef, useState } from "react";
-import { Animated, Text, TextInput, View } from "react-native";
+import { Animated, Image, Text, TextInput, View } from "react-native";
+
 import { Wave } from "../../../../assets/icons/wave";
 import { Slider } from "../../../components";
 import { styles } from "./style";
+import { DashedLine } from "../../../../assets/icons/dashed-line";
 
 const Volume = () => {
   const {
@@ -15,6 +17,7 @@ const Volume = () => {
     inputLabel,
     textInputWrapper,
     textInput,
+    procent,
   } = styles();
   const [value, setValue] = useState(0);
 
@@ -41,10 +44,15 @@ const Volume = () => {
           We’ll stop the pump when your tank drops below:
         </Text>
         <View style={sliderContainer}>
-          <View style={animatedViewContainer}>
+          <Image
+            source={require("../../../../assets/icons/tank.png")}
+            style={{ width: 200, height: 200 }}
+          />
+          <View style={[animatedViewContainer]}>
             <Wave />
             <Animated.View style={[animatedView, { height: animatedHeight }]} />
           </View>
+          <Image source={require("../../../../assets/icons/dashedLine.png")} />
           <Slider value={value} setValue={setValue} />
         </View>
       </View>
@@ -58,7 +66,7 @@ const Volume = () => {
             keyboardType="numeric"
             maxLength={3}
           />
-          <Text>%</Text>
+          <Text style={procent}>%</Text>
         </View>
       </View>
     </>
